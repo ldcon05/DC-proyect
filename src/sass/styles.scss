@@ -1,0 +1,15 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import 
+    './settings/_global',
+    './settings/_colors';
+
+@import './tools/_breakpoints';
+
+@import './generic/_normalize.scss';
+
+@import './elements/_typograpy';
+
+@import './objects/_container';
+
+@import './trumps/_shame';
