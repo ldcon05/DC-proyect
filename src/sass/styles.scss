@@ -4,7 +4,9 @@
     './settings/_global',
     './settings/_colors';
 
-@import './tools/_breakpoints';
+@import 
+    './tools/_breakpoints',
+    './tools/_fontface';
 
 @import './generic/_normalize.scss';
 
