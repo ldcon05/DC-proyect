@@ -12,6 +12,10 @@
 
 @import './elements/_typograpy';
 
-@import './objects/_container';
+@import 
+    './objects/_container',
+    './objects/_img';
+
+@import './components/_hamburger-menu';
 
 @import './trumps/_shame';

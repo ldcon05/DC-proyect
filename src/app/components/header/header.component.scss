@@ -1,0 +1,24 @@
+@import '~sass/settings/_colors';
+
+header {
+    padding: 1em;
+    box-shadow: 0px 3px 5px 0px rgba($trolley_grey, 0.2);
+    justify-content: space-between;
+    align-items: center;
+}
+
+header > div:first-child > h1 {
+    display: inline-block;
+    margin: 0em;
+}
+
+header > div:first-child > h1:first-child {
+    color: $independence;
+    font-family: "Fivo Sans Medium";
+}
+
+header > div:first-child > h1:last-child {
+    color: $brilliant_azure;
+    font-family: "Fivo Sans Light";
+    margin-left: 5px;
+}

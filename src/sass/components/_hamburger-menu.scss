@@ -1,0 +1,15 @@
+.hamburger-menu {
+    width: 50px;
+    cursor: pointer;
+}
+
+.hamburger-menu > div{
+    width: 30px;
+	height: 3px;
+    background-color: $brilliant_azure;
+    margin: auto;
+}
+
+.hamburger-menu > div:nth-child(2){
+    margin: 5px auto;
+}
