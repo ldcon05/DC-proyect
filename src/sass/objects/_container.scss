@@ -4,10 +4,10 @@
     margin: auto;
 }
 
-.container-fluid {
-    width: 100%;
-}
-
 .flex-container {
     display: flex;
+}
+
+.grid-container {
+    display: grid;
 }

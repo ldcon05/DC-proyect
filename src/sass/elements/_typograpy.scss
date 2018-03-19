@@ -4,8 +4,6 @@
 @include fontFace('Fivo Sans Light','/assets/fonts/fivosans/FivoSans-Light', 'normal', '300');
 @include fontFace('Fivo Sans Thin','/assets/fonts/fivosans/FivoSans-Thin', 'normal', '100');
 
-//Dosis
-@include fontFace('Dosis SemiBold','/assets/fonts/dosis/Dosis-SemiBold', 'normal', '600');
-@include fontFace('Dosis Medium','/assets/fonts/dosis/Dosis-Medium', 'normal', '500');
-@include fontFace('Dosis','/assets/fonts/dosis/Dosis-Regular', 'normal', 'normal');
-@include fontFace('Dosis Light','/assets/fonts/dosis/Dosis-Light', 'normal', '300');
+//OpenSans
+@include fontFace('Opensans','/assets/fonts/opensans/OpenSans-Regular', 'normal', 'normal');
+@include fontFace('Opensans Light','/assets/fonts/opensans/OpenSans-Light', 'normal', '300');

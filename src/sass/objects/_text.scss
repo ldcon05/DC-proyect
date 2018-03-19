@@ -1,0 +1,35 @@
+.title {
+    font-family: "Fivo Sans Light";
+}
+
+
+.paragraph {
+    font-family: 'Opensans Light';
+}
+
+//Split
+
+.split {
+    height: 1em;
+    width: 1em;
+    margin: 2em 0em;
+    border-radius: 1em;
+    border: 3px solid $brilliant_azure;
+}
+
+.split::before, .split::after{
+    content: " ";
+    position: absolute;
+    width: 6em;
+    border :1px solid rgba($trolley_grey, 0.2);
+    margin-top: 6px;
+}
+
+.split::before{
+    margin-left: -7em;
+}
+
+.split::after{
+    margin-left: 1.85em;
+    
+}

@@ -1,0 +1,21 @@
+@import '~sass/settings/colors';
+
+section.skills {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 6em 1fr;
+    height: 80vh;
+}
+
+.skills > div:first-child {
+    grid-column: 1 / span 2;
+    justify-content: center;
+    align-items: center;
+}
+
+.skills > div:first-child h2 {
+    background-color: $brilliant_azure;
+    color: $baby_powder;
+    padding: 1em;
+    width: 100%;
+    text-align: center;
+}
