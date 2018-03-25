@@ -2,9 +2,12 @@
 
 section.skills {
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 6em 1fr;
-    height: 80vh;
+    grid-template-rows: 6em repeat(2, 1fr);
+    grid-gap: 2em;
+    height: 100vh;
 }
+
+//Titulo
 
 .skills > div:first-child {
     grid-column: 1 / span 2;
@@ -19,3 +22,60 @@ section.skills {
     width: 100%;
     text-align: center;
 }
+
+//Backend
+.skills .backend {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.backend-line-1 {
+    animation: code 2s ease-out infinite;
+}
+
+.backend-line-2 {
+    animation: pasteCode 4s ease-in infinite;
+}
+
+.backend-line-3 {
+    animation: errorSuccess 2s ease-in infinite;
+}
+
+//Frontend
+.skills .frontend {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+//DB 
+.skills .db {
+    grid-column: 1;
+    grid-row: 3;
+}
+
+//Servers
+.skills .servers {
+    grid-column: 2;
+    grid-row: 3;
+}
+
+//Backend Animations
+@keyframes code {
+    0% { d: path('M 193.5 323.3 h 0 v 19.3 H 193.5 Z') }
+    50% { d: path('M 193.5 323.3 h 130.4 v 19.3 H 193.5 Z') }
+    100% { d: path('M 193.5 323.3 h 0 v 19.3 H 193.5 Z') }
+} 
+
+@keyframes pasteCode {
+    0% { d: path('M 193.5 364.1 h 0 v 19.3 H 193.5 Z') }
+    25% { d: path('M 193.5 364.1 h 100 v 19.3 H 193.5 Z'); fill: $trolley_grey }
+    50% { d: path('M 193.5 364.1 h 50 v 19.3 H 193.5 Z');  fill: $desire }
+    75% { d: path('M 193.5 364.1 h 200 v 19.3 H 193.5 Z'); fill: $medium_aquamarine }
+    100% { d: path('M 193.5 364.1 h 0 v 19.3 H 193.5 Z');  fill: $medium_aquamarine }
+} 
+
+@keyframes errorSuccess {
+    0% { fill: $desire }
+    50% { fill: $medium_aquamarine }
+    100% { fill: $desire }
+} 
