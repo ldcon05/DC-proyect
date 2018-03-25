@@ -47,6 +47,27 @@ section.skills {
     grid-row: 2;
 }
 
+.frontend-sky {
+    animation: dayToNightSky 5s ease-out infinite;
+}
+
+.frontend-floor {
+    animation: dayToNightFloor 5s ease-out infinite;
+}
+
+.frontend-mountain {
+    animation: dayToNightMountains 5s ease-out infinite;
+}
+
+.frontend-sun-moon {
+    animation: sunAndMoon 5s ease-out infinite;
+}
+
+.frontend-footer {
+    animation: buildFooter 10s ease-in-out infinite;
+}
+
+
 //DB 
 .skills .db {
     grid-column: 1;
@@ -57,6 +78,10 @@ section.skills {
 .skills .servers {
     grid-column: 2;
     grid-row: 3;
+}
+
+.server-status {
+    animation: serverBip 0.5s ease infinite;
 }
 
 //Backend Animations
@@ -79,3 +104,44 @@ section.skills {
     50% { fill: $medium_aquamarine }
     100% { fill: $desire }
 } 
+
+//Frontend Animations
+
+@keyframes dayToNightSky {
+    0% { fill: $maya_blue }
+    50% { fill: $yankees_blue }
+    100% { fill: $maya_blue }
+}
+
+@keyframes dayToNightFloor {
+    0% { fill: $green_ryb }
+    50% { fill: $lincoln_green }
+    100% { fill: $green_ryb }
+}
+
+@keyframes dayToNightMountains {
+    0% { fill: $yellow_green }
+    50% { fill: $dark_moss_green }
+    100% { fill: $yellow_green }
+}
+
+@keyframes sunAndMoon {
+    0% { fill: $grain_yellow }
+    50% { fill: $baby_powder }
+    100% { fill: $grain_yellow }
+}
+
+@keyframes buildFooter {
+    0% { d: path('M 43.5 443 H 43.5 v 50 H 43.5 Z') }
+    50% { d: path('M 43.5 443 H 456 v 50 H 43.5 Z') }
+    100% { d: path('M 43.5 443 H 43.5 v 50 H 43.5 Z') }
+}
+
+
+//Servers
+@keyframes serverBip {
+    0% { fill: $baby_powder }
+    50% { fill: $desire }
+    100% { fill: $baby_powder }
+}
+
