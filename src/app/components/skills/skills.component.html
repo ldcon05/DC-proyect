@@ -25,8 +25,42 @@
       <path fill="#adadad" d="M193.5 282.5h82.6v19.3h-82.6z" />
       <path class="st10 backend-line-3" d="M241.3 241.7h82.6V261h-82.6zM287 282.5h26.1v19.3H287z" />
       <path class="st8" d="M323.9 282.5h52.2v19.3h-52.2z" />
-      <path class="st7 backend-line-1" d="M193.5 323.3h130.4v19.3H193.5z" />
-      <path class="st10 backend-line-2" d="M193.5 364.1H400v19.3H193.5z" />
+      <path class="st7 backend-line-1">
+            <animate 
+                attributeName="d" 
+                dur="2s" 
+                repeatCount="indefinite"
+                calcMode="spline"
+                values = "
+                    M 193.5 323.3 h 0 v 19.3 H 193.5 Z;
+                    M 193.5 323.3 h 130.4 v 19.3 H 193.5 Z;
+                    M 193.5 323.3 h 0 v 19.3 H 193.5 Z
+                "
+                keyTimes="0; 0.45; 1"
+                keySplines="0.42 0 1 1;
+                0.42 0 1 1"
+            />
+      </path>
+      <path class="st10 backend-line-2" d="M193.5 364.1H400v19.3H193.5z" >
+        <animate 
+            attributeName="d" 
+            dur="4s" 
+            repeatCount="indefinite"
+            calcMode="spline"
+            values = "
+                M 193.5 364.1 h 0 v 19.3 H 193.5 Z;
+                M 193.5 364.1 h 100 v 19.3 H 193.5 Z;
+                M 193.5 364.1 h 50 v 19.3 H 193.5 Z;
+                M 193.5 364.1 h 200 v 19.3 H 193.5 Z;
+                M 193.5 364.1 h 0 v 19.3 H 193.5 Z
+            "
+            keyTimes="0; 0.45; 0.6; 0.9; 1"
+            keySplines="0.42 0 1 1;
+            0 0 0.59 1;
+            0.42 0 1 1;
+            0.42 0 1 1"
+        />
+      </path>
       <path class="backend-line-3" d="M230.4 404.9h45.7v19.3h-45.7z" />
       <path opacity=".1" fill="#5c6366" d="M21.7 73h456.5v10.7H21.7z" />
       <path class="st13" d="M194 146.2l-42.4 24.2v-22.3l42.4-24.2z" />
@@ -35,6 +69,7 @@
     </svg>
   </div>
   <div class="frontend flex-container">
+    <h2>Maquetación y Diseño</h2>
     <svg xmlns="http://www.w3.org/2000/svg" class="img-responsive-w" viewBox="0 0 500 580">
         <style>
           .st6 {
@@ -58,11 +93,27 @@
         <path class="frontend-mountain" d="M293.4 158l62.5 69h-125z" />
         <path class="frontend-mountain" d="M393.4 183l62.5 44h-125z" />
         <circle class="frontend-sun-moon" cx="343.5" cy="148.5" r="17.5" />
-        <path class="frontend-footer" fill="#e84855"  d="M43.5 443H456v50H43.5z" />
+        <path class="frontend-footer" fill="#e84855">
+            <animate 
+                attributeName="d" 
+                dur="6s" 
+                repeatCount="indefinite"
+                calcMode="spline"
+                values = "
+                    M 43.5 443 H 43.5 v 50 H 43.5 Z;
+                    M 43.5 443 H 456 v 50 H 43.5 Z;
+                    M 43.5 443 H 43.5 v 50 H 43.5 Z;
+                "
+                keyTimes="0; 0.6; 1"
+                keySplines="0.42 0 0.6 1;
+                0.42 0 0.2 1"
+            />
+        </path>
+
     </svg>
   </div>
   <div class="db flex-container">
-    <svg xmlns="http://www.w3.org/2000/svg" class="img-responsive-w" viewBox="0 0 450.1 500">
+    <svg xmlns="http://www.w3.org/2000/svg" class="img-responsive-w" viewBox="0 0 500 580">
       <style>
           .db-0 {
               fill: rgb(22, 22, 22)
@@ -83,7 +134,7 @@
    </svg>
   </div>
   <div class="servers flex-container">
-    <svg xmlns="http://www.w3.org/2000/svg" class="img-responsive-w" viewBox="0 0 520 500">
+    <svg xmlns="http://www.w3.org/2000/svg" class="img-responsive-w" viewBox="0 0 500 580">
         <style>
             .st0 {
                 fill: #1d3d50
