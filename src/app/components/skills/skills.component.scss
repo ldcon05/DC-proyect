@@ -2,8 +2,9 @@
 
 section.skills {
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 6em repeat(2, 25em);
-    grid-row-gap: 4em;
+    grid-template-rows: 6em repeat(2, 27em);
+    grid-row-gap: 6em;
+    grid-column-gap: 2em;
 }
 
 //Titulo
@@ -22,10 +23,26 @@ section.skills {
     text-align: center;
 }
 
-//Backend
-.skills .backend {
+.skills > div:nth-child(2) {
     grid-column: 1;
     grid-row: 2;
+}
+
+//Propiedades en común
+
+.skills > div > h2 {
+    color: $brilliant_azure;
+    text-align: center;
+}
+
+.backend, .frontend, .db, .servers {
+    align-items: center;
+    justify-content: center;
+}
+
+
+//Backend
+.skills .backend {
 }
 
 .backend-line-1 {
@@ -41,9 +58,13 @@ section.skills {
 }
 
 //Frontend
+.skills > div:nth-child(3) {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+
 .skills .frontend {
-    grid-column: 2/3;
-    grid-row: 2/3;
 }
 
 .frontend-sky {
@@ -68,15 +89,21 @@ section.skills {
 
 
 //DB 
-.skills .db {
+.skills > div:nth-child(4) {
     grid-column: 1;
     grid-row: 3;
 }
 
+.skills .db {
+}
+
 //Servers
-.skills .servers {
+.skills > div:last-child {
     grid-column: 2;
     grid-row: 3;
+}
+
+.skills .servers {
 }
 
 .server-status {
