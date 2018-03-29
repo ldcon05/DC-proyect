@@ -1,8 +1,7 @@
 @import '~sass/settings/_colors';
 
 .introduction.grid-container {
-    margin-top: 1em;
-    height: 80vh;
+    height: 100vh;
     grid-gap: 2em;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
@@ -16,7 +15,7 @@
 
 // Titulos
 
-.introduction div:first-child {
+.introduction > div:first-child {
     grid-column-start: 2;
     grid-row: 1 / span 2 ;
     flex-direction: column;
@@ -27,7 +26,7 @@
 .introduction > div:first-child .title > h1{
     display: inline-block;
     margin-bottom: 5px;
-    font-size: 3em;
+    font-size: 5em;
 }
 
 .introduction > div:first-child .title > h1:first-child{
@@ -44,7 +43,11 @@
 .introduction > div:first-child .work {
     margin: 0px;
     font-size: 1.2em;
-    color:$trolley_grey;
+    background-color: $desire;
+    color:$white;
+    padding: 0.5em 1em;
+    border-radius: 5em;
+    font-weight: bold;
 }
 
 .introduction div:first-child p:last-child{
@@ -73,4 +76,38 @@
     height: 90%;
 }
 
+//SVG
+
+.introduction svg {
+    position: absolute;
+    height: 90vh;
+    right: 0;
+}
+
+.introduction svg .st0,
+.introduction svg .st1,
+.introduction svg .st2 {
+    stroke: rgba($brilliant_azure, 0.1);
+}
+
+.introduction svg .st0 {
+    stroke-dasharray: 250;
+    stroke-dashoffset: 500;
+    animation: dash 6s ease-in infinite;
+}
+
+.introduction svg .st1 {
+    stroke-dasharray: 300;
+    stroke-dashoffset: 600;
+    animation: dash 3s ease-out infinite;
+}
+
+
+
 //Animaciones
+
+@keyframes dash {
+    to {
+      stroke-dashoffset: 0;
+    }
+}

@@ -1,21 +1,70 @@
 @import '~sass/settings/_colors';
 
 header {
-    padding: 1em;
-    box-shadow: 0px 3px 5px 0px rgba($trolley_grey, 0.2);
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    width: 6.5em;
+    height: 100vh;
+    position: fixed;
+    background-color: $white;
+    box-shadow: 3px 0 3px 3px rgba($trolley_grey, 0.1)
 }
 
-header > div:first-child > h1 {
-    display: inline-block;
-    margin: 0em;
+//Logo
+header > div.logo {
+    padding: 1em;
+    background-color: $baby_powder;
+    font-family: 'Fivo Sans';
+    font-size:1.2em;
+    color: $brilliant_azure;
 }
 
-header > div:first-child > h1:first-child {
+//Social Networks && Menu
+
+header > div.social-networks, header > div.menu {
+    width: 100%;
+    text-align: center;
+}
+
+header > div.social-networks > span, header > div.menu > span {
+    display: block;
+    padding: 1em 0em;
+    font-size: 15pt;
+    transition: all 0.2s ease-out;
     color: $independence;
 }
 
-header > div:first-child > h1:last-child {
-    color: $brilliant_azure;
+//Social Networks
+
+header > div.social-networks > span {
+    background-color: $snow;
+}
+
+header > div.social-networks > span:first-child {
+    color: $blue_nsc;  
+}
+
+header > div.social-networks > span:last-child {
+    color: $eerie_black;
+}
+
+//Hover 
+header > div.social-networks > span:hover {
+    transition: all 0.4s ease-out;
+}
+
+header > div.social-networks > span:first-child:hover {
+   border-left: 0.8em solid $blue_nsc;
+}
+
+header > div.social-networks > span:last-child:hover {
+    border-left: 0.8em solid $eerie_black;
+}
+
+
+header > .hamburger-menu {
+    width: 100%;
+    padding: 2em 0em;
+    background-color: $white_smoke;
 }
