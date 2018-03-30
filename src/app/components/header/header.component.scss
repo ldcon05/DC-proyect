@@ -1,70 +1,143 @@
+@import '~sass/settings/_global';
 @import '~sass/settings/_colors';
+@import '~sass/tools/_breakpoints';
 
 header {
-    flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    width: 6.5em;
-    height: 100vh;
-    position: fixed;
     background-color: $white;
-    box-shadow: 3px 0 3px 3px rgba($trolley_grey, 0.1)
+    box-shadow: 0px 3px 3px 3px rgba($trolley_grey, 0.1);
+    @include xl {
+        flex-direction: column;
+        width: 6.5em;
+        height: 100vh;
+        position: fixed;
+        box-shadow: 3px 0 3px 3px rgba($trolley_grey, 0.1);
+    }
 }
 
 //Logo
 header > div.logo {
-    padding: 1em;
+    padding: 0.5em;
+    width: 2em;
     background-color: $baby_powder;
     font-family: 'Fivo Sans';
     font-size:1.2em;
     color: $brilliant_azure;
+
+    @include xl {
+        padding: 1em;
+        width: auto;
+    }
 }
 
 //Social Networks && Menu
 
-header > div.social-networks, header > div.menu {
-    width: 100%;
-    text-align: center;
+header > div.social-networks, 
+header > div.menu {
+    @include xl {
+        width: 100%;
+        text-align: center;
+    }
 }
 
-header > div.social-networks > span, header > div.menu > span {
+header > div.social-networks > a , 
+header > div.menu > a {
+    transition: all 0.2s ease-out;
+}
+
+//Menu
+
+header > div.menu {
+    display: none;
+    
+    @include xl {
+        display: block;
+    }
+}
+
+header > div.menu > a {
+    color: rgba($trolley_grey, 0.3);
+    font-size: 15pt;
     display: block;
     padding: 1em 0em;
-    font-size: 15pt;
-    transition: all 0.2s ease-out;
-    color: $independence;
+}
+
+header > div.menu > a > p{
+    margin: 5px 0px 0px;
+    font-size: 13.5px;
+    display: none;
+}
+
+header > div.menu > a:hover {
+    background-color: $baby_powder;
+    span {
+        display: none;
+    }
+    p {
+        display: block;
+    }
+}
+
+header > div.menu > a:nth-child(odd):hover {
+    color: $brilliant_azure;
+}
+
+header > div.menu > a:nth-child(even):hover {
+    color: $maya_blue;
 }
 
 //Social Networks
 
-header > div.social-networks > span {
-    background-color: $snow;
+header > div.social-networks {
+    display: none;
+    
+    @include xl {
+        display: block;
+    }
 }
 
-header > div.social-networks > span:first-child {
-    color: $blue_nsc;  
+header > div.social-networks > a {
+    padding: 0em 0.5em;
+    font-size: 1.5em;
+    @include xl {
+        padding: 1em 0em;
+        display: block;
+        font-size: 15pt;
+        background-color: $baby_powder
+    }
 }
 
-header > div.social-networks > span:last-child {
+header > div.social-networks > a:first-child {
+    color: $brilliant_azure;
+}
+
+header > div.social-networks > a:last-child {
     color: $eerie_black;
 }
 
-//Hover 
-header > div.social-networks > span:hover {
-    transition: all 0.4s ease-out;
+header > div.social-networks > a:hover:first-child,
+header > div.social-networks > a:hover:last-child  {
+    color: $white;
 }
 
-header > div.social-networks > span:first-child:hover {
-   border-left: 0.8em solid $blue_nsc;
+header > div.social-networks > a:hover:first-child  {
+    background-color: $brilliant_azure;
 }
 
-header > div.social-networks > span:last-child:hover {
-    border-left: 0.8em solid $eerie_black;
+header > div.social-networks > a:hover:last-child  {
+    background-color: $eerie_black;
 }
 
+
+
+//Hamburger Menu
 
 header > .hamburger-menu {
-    width: 100%;
-    padding: 2em 0em;
-    background-color: $white_smoke;
+    display: block;
+    padding: 0.5em;
+
+    @include xl {
+        display: none;
+    }
 }

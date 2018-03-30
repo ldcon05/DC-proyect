@@ -1,3 +1,8 @@
+@import '~sass/settings/_global';
+@import '~sass/tools/_breakpoints';
+
 #page-sections {
-    margin-left: 5.5em;
+    @include xl {
+        margin-left: 5.5em;
+    }
 }
