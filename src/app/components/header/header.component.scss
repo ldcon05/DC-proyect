@@ -51,16 +51,20 @@ header > div.menu > a {
 header > div.menu {
     display: none;
     
-    @include xl {
+    @include md {
         display: block;
     }
 }
 
 header > div.menu > a {
     color: rgba($trolley_grey, 0.3);
-    font-size: 15pt;
-    display: block;
-    padding: 1em 0em;
+    padding: 0em 1em;
+    font-size: 1.5em;
+    @include xl {
+        font-size: 15pt;
+        display: block;
+        padding: 1em 0em;
+    }
 }
 
 header > div.menu > a > p{
@@ -87,13 +91,21 @@ header > div.menu > a:nth-child(even):hover {
     color: $maya_blue;
 }
 
+header > div.menu > a.active {
+    color: $brilliant_azure;
+}
+
 //Social Networks
 
 header > div.social-networks {
     display: none;
     
-    @include xl {
+    @include md {
         display: block;
+        padding: 0em 1em;
+    }
+    @include lg {
+        padding: 0em;
     }
 }
 
@@ -137,7 +149,7 @@ header > .hamburger-menu {
     display: block;
     padding: 0.5em;
 
-    @include xl {
+    @include md {
         display: none;
     }
 }

@@ -8,16 +8,17 @@
     
     grid-template-columns: 1fr;
     grid-template-rows: repeat(2, 1fr);
-    grid-row-gap: 3em;
+    grid-row-gap: 1.5em;
     align-content: center;
 
     background-image: url("/assets/img/pattern.png");
     background-size: 100%;
     background-repeat: no-repeat;
-    background-position-y: center;
+    background-position-y: 60%;
 
     @include sm {
         grid-row-gap: 2em;
+        background-position-y: center;
     }
 
     @include lg {
