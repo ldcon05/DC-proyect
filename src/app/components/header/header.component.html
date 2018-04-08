@@ -4,7 +4,7 @@
     </div>
 
     <div class="menu">
-        <a class="active"  href="#">
+        <a class="active"  [routerLink]="['/']">
             <span class="icon-home icons"></span>
             <p class="paragraph">Inicio</p>
         </a>
@@ -12,11 +12,11 @@
             <span class="icon-emotsmile icons"></span>
             <p class="paragraph">Sobre MI</p>
         </a>
-        <a href="#">
+        <a [routerLink]="['habilidades']">
             <span class="icon-graph icons"></span>
             <p class="paragraph">Habilidades</p>
         </a>
-        <a  href="#">
+        <a  [routerLink]="['contacto']">
             <span class="icon-envelope-letter icons"></span>
             <p class="paragraph">Contacto</p>
         </a>
