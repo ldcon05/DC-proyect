@@ -1,10 +1,17 @@
+@import '~sass/settings/_global';
 @import '~sass/settings/colors';
+@import '~sass/tools/_breakpoints';
 
 section.skills {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    grid-row-gap: 2em;
-    grid-column-gap: 2em;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: 1fr;
+    
+    @include md {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-row-gap: 2em;
+        grid-column-gap: 2em;
+    }
 }
 
 //Propiedades en común
@@ -23,15 +30,25 @@ section.skills {
 .backend, .frontend, .db, .servers {
     align-items: center;
     justify-content: center;
-    flex-direction: row-reverse;
+    flex-direction: column;
     padding: 1.5em;
+
+    @include xl {
+        flex-direction: row-reverse;
+    }
 }
 
 .chips-container {
+    width: 100%;
     flex-wrap: wrap;
-    width: 45%;
-    margin: 1em;
-    justify-content: space-between;
+    justify-content: center;
+    margin: 3em 0em 0em;
+
+    @include xl {
+        width: 45%;
+        justify-content: space-between;
+        margin: 1em;
+    }
 }
 
 .chips {
@@ -39,13 +56,27 @@ section.skills {
     margin: 5px;
     border-radius: 1em;
     font-weight: bold;
-    font-size: 15px;
+    font-size: 12px;
     transition: all 0.2s ease;
     cursor: default;
+    
+    @include xl {
+        font-size: 1em;
+    }
+
+    @include rwd(1920) {
+        font-size: 1.2em;
+    }
 }
 
 .chips:hover {
-    font-size: 1.2em;
+    font-size: 1em;
+    @include xl {
+        font-size: 1.1em;
+    }
+    @include rwd(1920) {
+        font-size: 1.3em;
+    }
 }
 
 .chips:nth-child(odd) {
@@ -66,7 +97,9 @@ section.skills {
 }
 
 .skills .backend {
-    flex-direction: row
+    @include xl {
+        flex-direction: row;
+    }
 }
 
 
@@ -87,8 +120,13 @@ section.skills {
 //Frontend
 
 .skills > div:nth-child(2) {
-    grid-column: 2;
-    grid-row: 1;
+    grid-row: 2;
+    grid-column: 1;
+
+    @include md {
+        grid-column: 2;
+        grid-row: 1;
+    }
 }
 
 
@@ -118,17 +156,28 @@ section.skills {
 //DB 
 .skills > div:nth-child(4) {
     grid-column: 1;
-    grid-row: 2;
+    grid-row: 3;
+
+    @include md {
+        grid-row: 2;
+    }
 }
 
-.skills .db {
-    flex-direction: row
+.skills .db { 
+    @include xl {
+        flex-direction: row;
+    }
 }
 
 //Servers
 .skills > div:last-child {
-    grid-column: 2;
-    grid-row: 2;
+    grid-column: 1;
+    grid-row: 4;
+
+    @include md {
+        grid-column: 2;
+        grid-row: 2;
+    }
 }
 
 
@@ -140,7 +189,15 @@ section.skills {
 //SVG
 
 svg.img-responsive-w {
-    width: 50%;
+    width: 75%;
+
+    @include xl {
+        width: 50%;
+    }
+    
+    @include rwd(1600) {
+        width: 29vw;
+    }
 }
 
 //Backend Animations
