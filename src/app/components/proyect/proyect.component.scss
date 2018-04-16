@@ -1,0 +1,102 @@
+@import '~sass/settings/_global';
+@import '~sass/settings/_colors';
+@import '~sass/tools/_breakpoints';
+
+div.about.grid-container {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    height: 100vh;
+}
+
+// About Me
+
+div.me {
+    grid-column: 1;
+    grid-row: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+div.me > h1 {
+    font-size: 4em;
+    color: $brilliant_azure;
+    word-spacing: -10px;
+    margin-top: 0em;
+}
+
+div.me > h1 > span {
+    font-family: 'Fivo Sans Medium';
+    color: $white;
+    background-color: $independence;
+    padding: 12px; 
+}
+
+div.me > div {
+    width: 80%;
+    padding: 1em;
+}
+
+div.me > div > p {
+    font-size: 1.2em;
+    font-family: 'Fivo Sans Light';
+    text-align: justify;
+    color: $maastricht_blue;
+}
+
+div.me > div > p > span.remark {
+    color: $brilliant_azure;
+}
+
+div.me > a {
+    align-self: center;
+    padding: 1em;
+    background-color: $brilliant_azure;
+    color: $white;
+    border-radius: 2em;
+    word-spacing: 10px;
+    font-family: 'Fivo Sans';
+    margin-top: 2em;
+}
+
+div.me > a > span {
+    padding: 10px;
+    border-radius: 2em;
+    background-color: $baby_powder;
+    color: $brilliant_azure;
+}
+
+//Map
+
+div.map {
+    grid-column: 2;
+    grid-row: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+div.map div:last-child {
+    height: 90vh;
+    width: 50%;
+    position: absolute;
+    right: 0;
+    z-index: -1;
+}
+
+
+div.map svg .stroke-map {
+    stroke-dasharray: 3550;
+    stroke-dashoffset: 3550;
+    stroke: $maastricht_blue;
+    fill: $white;
+    opacity: 0.81;
+    stroke-width: 10;
+    animation: dash 5s ease infinite;
+}
+
+//Animaciones
+@keyframes dash {
+    to {
+      stroke-dashoffset: 0;
+    }
+}
