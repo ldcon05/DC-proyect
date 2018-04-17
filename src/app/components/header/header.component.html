@@ -4,15 +4,16 @@
     </div>
 
     <div class="menu">
-        <a class="active"  [routerLink]="['/']">
-            <span class="icon-home icons"></span>
-            <p class="paragraph">Inicio</p>
+        <a  [routerLink]="['/']" routerLinkActive="active" 
+            [routerLinkActiveOptions]="{ exact: true }">
+                <span class="icon-home icons"></span>
+                <p class="paragraph">Inicio</p>
         </a>
-        <a [routerLink]="['sobre-mi']">
+        <a [routerLink]="['sobre-mi']" routerLinkActive = 'active'>
             <span class="icon-emotsmile icons"></span>
             <p class="paragraph">Sobre MI</p>
         </a>
-        <a [routerLink]="['habilidades']">
+        <a [routerLink]="['habilidades']" routerLinkActive = 'active'>
             <span class="icon-graph icons"></span>
             <p class="paragraph">Habilidades</p>
         </a>

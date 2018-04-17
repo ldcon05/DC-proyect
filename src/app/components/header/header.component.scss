@@ -78,21 +78,16 @@ header > div.menu > a > p{
 }
 
 header > div.menu > a:hover {
-    background-color: $baby_powder;
-    span {
-        display: none;
+    @include xl {
+        background-color: $baby_powder;
+        color: $brilliant_azure;
+        span {
+            display: none;
+        }
+        p {
+            display: block;
+        }
     }
-    p {
-        display: block;
-    }
-}
-
-header > div.menu > a:nth-child(odd):hover {
-    color: $brilliant_azure;
-}
-
-header > div.menu > a:nth-child(even):hover {
-    color: $maya_blue;
 }
 
 header > div.menu > a.active {
