@@ -65,6 +65,10 @@ header > div.menu > a {
         display: block;
         padding: 1em 0em;
     }
+
+    @include rwd(1600) {
+        font-size: 18pt;
+    }
 }
 
 header > div.menu > a > p{
@@ -117,6 +121,10 @@ header > div.social-networks > a {
         display: block;
         font-size: 15pt;
         background-color: $baby_powder
+    }
+
+    @include rwd(1600) {
+        font-size: 18pt;
     }
 }
 
