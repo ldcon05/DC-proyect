@@ -15,5 +15,4 @@ export class HeaderComponent implements OnInit {
     this.name = 'Ldcon' ;
     this.lastname = '.ninja';
   }
-
 }

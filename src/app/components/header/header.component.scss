@@ -48,13 +48,6 @@ header > div.menu > a {
 
 //Menu
 
-header > div.menu {
-    display: none;
-    
-    @include md {
-        display: block;
-    }
-}
 
 header > div.menu > a {
     color: rgba($trolley_grey, 0.3);

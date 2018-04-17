@@ -32,3 +32,12 @@
         @content;
     }
  }
+
+// Landscape Devices
+@mixin landscape {
+    @media only screen 
+        and (max-device-width: #{$screen-landscape})
+        and (orientation: landscape) {
+            @content
+    }
+}

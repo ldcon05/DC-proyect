@@ -1,6 +1,7 @@
 .hamburger-menu {
     width: 50px;
-    cursor: pointer;
+    cursor: default;
+    transition: all 0.2s ease;
 }
 
 .hamburger-menu > div{
@@ -8,8 +9,28 @@
 	height: 3px;
     background-color: $brilliant_azure;
     margin: auto;
+    transition: all 0.2s ease;
 }
 
 .hamburger-menu > div:nth-child(2){
     margin: 5px auto;
+}
+
+//Transform
+.hamburger-menu.active > div {
+	transform: rotate(180deg);
+}
+
+.hamburger-menu.active > div:first-child {
+	width: 40px;
+	transform: translateY(2px) rotate(45deg);
+}
+
+.hamburger-menu.active > div:nth-child(2) {
+	display: none;
+}
+
+.hamburger-menu.active > div:last-child {
+	width: 40px;
+	transform: translateY(-1px) rotate(-45deg);
 }

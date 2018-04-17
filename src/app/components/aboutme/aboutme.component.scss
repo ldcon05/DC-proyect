@@ -21,6 +21,13 @@
         background-position-y: center;
     }
 
+    @include landscape {
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 2em;
+        background-size:50%;
+        background-position-y: top;
+    }
+
     @include lg {
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 2em;
@@ -51,6 +58,11 @@
     grid-row: 1;
     flex-direction: column;
 
+    @include landscape {
+        grid-column-start: 2;
+        grid-row: 1 / span 2 ;
+    }
+
     @include lg {
         grid-column-start: 2;
         grid-row: 1 / span 2 ;
@@ -62,6 +74,10 @@
     margin-bottom: 5px;
     font-size: 4em;
     transition: all 1s ease;
+
+    @include landscape {
+        font-size: 3.2em;
+    }
 
     @include md {
         font-size: 5em;
@@ -91,6 +107,10 @@
     border-radius: 5em;
     font-weight: bold;
 
+    @include landscape {
+        font-size: 0.85em;
+    }
+
     @include md {
         font-size: 1.2em;
     }
@@ -118,6 +138,11 @@
     grid-column: 1;
     grid-row: 2;
     text-align: center;
+
+    @include landscape {
+        grid-column-start: 1;
+        grid-row: 1 / span 2;
+    }
 
     @include lg {
         grid-column-start: 1;
