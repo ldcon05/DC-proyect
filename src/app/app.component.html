@@ -1,6 +1,6 @@
 <main>
     <app-header></app-header>
-    <div id="page-sections">
-        <router-outlet></router-outlet>
+    <div id="page-sections" [@routerTransition]="getState(o)">
+        <router-outlet #o="outlet"></router-outlet>
     </div>
 </main>

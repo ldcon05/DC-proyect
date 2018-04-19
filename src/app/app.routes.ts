@@ -6,10 +6,8 @@ import { ProyectComponent } from './components/proyect/proyect.component';
 import { RouterModule, Routes } from '@angular/router';
 
 const app_routes: Routes = [
-  { path: '', component: AboutmeComponent},
-  { path: 'sobre-mi', component: ProyectComponent},
-  { path: 'habilidades', component: SkillsComponent},
-  { path: 'contacto', component: ContactmeComponent}
+  { path: '', component: AboutmeComponent , data: { state: 'inicio' }},
+  { path: 'sobre-mi', component: ProyectComponent, data: { state: 'sobre-mi' }},
+  { path: 'habilidades', component: SkillsComponent, data: { state: 'habilidades' }}
 ];
-const app_routing = RouterModule.forRoot(app_routes);
-export default app_routing;
+export const app_routing = RouterModule.forRoot(app_routes);
