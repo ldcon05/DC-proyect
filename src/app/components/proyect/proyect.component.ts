@@ -7,8 +7,6 @@ import { trigger, state, style, transition, animate, keyframes } from '@angular/
   styleUrls: ['./proyect.component.scss'],
   animations: [
     trigger('contactButtonAnimation', [
-      state('small', style({})),
-      state('large', style({})),
       transition('small <=> large', animate('300ms ease-in', keyframes([
         style({opacity: 0, transform: 'translateY(-25%)', offset: 0}),
         style({opacity: 1, transform: 'translateY(10px)',  offset: 0.5}),
